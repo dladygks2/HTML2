@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 
+        위에 이렇게 해야 JQuery를 이용하는 것
+        cdm 방식이라고 함
+    -->
+
+    <script>
+
+
+        $(document).ready(function () {
+
+            // jquery에서 css속성 사용하기
+
+            $("tr:even").css("background-color", "yellow");
+            // $("tr:odd").css("background-color", "yellow");
+
+
+
+            $("button").click(
+                function () {
+                    $("tr:odd").css("background-color", "pink");
+                });
+        });
+
+        //버튼이 눌러졌을 때 색상을 변경
+
+    </script>
+</head>
+
+<body>
+    <h1> welcome to My Web Page</h1>
+
+    <table border="1">
+        <tr>
+            <th>Company</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>삼성</td>
+            <td>대한민국</td>
+        </tr>
+        <tr>
+            <td>엘지</td>
+            <td>대한민국</td>
+        </tr>
+        <tr>
+            <td>메타</td>
+            <td>미국</td>
+        </tr>
+        <tr>
+            <td>Company</td>
+            <td>Country</td>
+        </tr>
+
+    </table>
+    <p></p>
+    <button>클릭해라</button>
+</body>
+
+</html>

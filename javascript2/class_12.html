@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 화살표 함수
+
+        // 함수 표현식
+        // let sum = function (a, b) {
+        //     return a + b;
+        // }
+
+        // 좀 더 간결하게 사용하는 방식
+        let sum = (a, b) => a + b; // 코드가 한줄일때는 이렇게 사용해도 된다.
+
+        // alert(sum(100, 1000));
+
+        // let double = n => n * 2;
+
+        // 함수 표현식으로 다시 만들라
+        let double = function (n) {
+            return n * 2;
+        }
+
+        // 인수가 하나도 없을 때는 괄호를 비워두면 된다.
+        // let sayHi = () => alert("안녕하세요.");
+        // // sayHi();
+
+        // let age = prompt("당신의 나이를 알려주세요.", 19);
+
+        // let welcome = (age < 19) ?
+        //     () => alert("안녕") :   // 괄호안이 true
+        //     () => alert("안녕하세요");  // 괄호안이 false
+        // welcome();
+
+        // let greet = () => alert("안녕하세요.");
+
+        // let age = prompt("몇 살?", 19);
+
+        // let welcom = (age > 19) ?
+        //     () => alert("안녕하세요") :
+        //     () => alert("ㅎㅇ");
+
+        // welcom();
+        // 본문이 여러줄인 화살표 함수
+
+        let sum2 = (a, b) => {
+            // 중괄호는 본문이 여러줄로 구성된다고 알려주는 것
+            let result = a + b; // 결과는 a + b 이다.
+            return result;
+
+        }
+        alert(sum2(88, 22)); // 위의 함수를 실행하는 방식
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

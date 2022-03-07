@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .container {
+        width: 1200px;
+        margin: auto;
+        text-align: center;
+        /* flex 속성  */
+        display: flex;
+        flex-wrap: wrap;
+        /* 범위를 벗어나면 자동으로 글이 내려오도록*/
+    }
+
+    header {
+        background-color: tomato;
+        flex: 1;
+        /*1200px 만큼 자기 영역을 가진다.*/
+        padding: 10px;
+    }
+
+    section {
+        display: flex;
+    }
+
+    section article {
+        padding: 30px 10px;
+    }
+
+    article.main {
+        background-color: gray;
+        order: 2;
+
+        flex: 4;
+    }
+
+    footer {
+        background-color: aqua;
+        flex: 1;
+        padding: 10px;
+
+    }
+
+    article.left {
+        background-color: yellow;
+        flex: 1;
+        order: 1;
+    }
+
+    article.right {
+        background-color: green;
+        flex: 1;
+        order: 3;
+        /*
+         flex 엔 order 라는 속성이 있다.
+         order의 속성으로 같은 줄의 배치의 순서를 바꿀 수 있다.
+        
+        */
+    }
+
+    /* 미디어 쿼리 (모바일폰 폭이 768px 이란다.) */
+    @media (max-width : 768px) {
+        .container {
+            width: 100%;
+        }
+
+        section {
+            /* 배열이 세로로 떨어짐 */
+            flex-direction: column;
+        }
+
+        section article {
+            padding: 10px;
+        }
+
+        article.main {
+            order: 0;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <header>Header</header>
+
+        <section>
+            <article class="main">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Repudiandae error at sunt suscipit minus quaerat porro.
+                    Amet voluptatum temporibus odio.
+                    Laudantium aperiam eaque magni molestiae
+                    fugit earum provident illum accusantium.</p>
+
+
+            </article>
+
+            <article class="left">Aside 1</article>
+            <article class="right">Aside 2</article>
+        </section>
+        <footer>Footer</footer>
+
+    </div>
+</body>
+
+</html>

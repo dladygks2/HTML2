@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // JSON이란?
+        // Java Script Object Notation 의 약자
+
+        // 클라이언트 - 서버
+        // 자바스크립트로 만든 객체를 php, jsp, java로 네트워크를 통해 연동할 때 그대로 사용이 불가 그래서
+        // 네트워크 통신으로 전부 문자열로 변환해서 전달 ex) name : 토니 .....
+
+        // 문자열을 잘라서 객체를 만들어서 맵핑을 해야함
+        // Person
+        // 규칙, 약속, 표준을 정함 = 그 형식을 JSON 형식이라함
+        // var person = {"height" : 100, "job" : "programmer"}
+        // var members = {"홍길동", "김유신", "티모"};
+
+        // 이렇게 보내면 용량도 적게 든다. 방법도 쉽다. 
+
+        // 원래는 javascript에서만 쓰려했지만 사용이 용이하여서 범용적으로 사용됨
+
+        let student = {
+            name: "John",
+            age: 30,
+            isAdmin: false,
+            courses: ['html', 'css', 'js'],
+            wife: null
+        };  //{"name":"John","age":30,"isAdmin":false,"courses":["html","css","js"]} 이렇게 보인다.
+
+
+        // stringify : 객체를 문자열로 변경 --> JSON 형식을 가진 문자열로 변환한다.
+        let json = JSON.stringify(student);
+
+        console.log(json);  // 인터넷 창에서 f11인가 그거해서 확인가능
+        console.log(typeof json);   // string 으로 나옴
+
+        // json이 보내는 형식은 
+        // 객체{...}
+        //배열 [...]
+        // 원시형 :
+        // 문자형
+        // 숫자형
+        // 불린형
+        // null
+
+        // JSON.parse
+        // JSON으로 다시 객체로 만들어준다.
+        // JSON은 무조건 ""로 묶어야한다.
+        let userData = '{"name":"John", "age": 35, "isAdmin" : true, "friends" : [0, 1, 2,3]}';
+
+        // 다시 객체로 만들어주는 과정 
+        let user = JSON.parse(userData);
+
+        alert(user.name);
+
+        console.log(user.friends[0]);
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 2021-12-01
+        // 자바스크립트 '함수표현식'
+        // 함수선언식 : function 같은거 
+        // function sayHi(){
+        //     alert("Hello");
+        // }
+
+        // 함수표현식 : 함수를 변수에 담아두는 형식을 말함
+        // let sayHi = function () {
+        //     alert("hello");
+        // }; // 마지막에 ; 붙여야함
+
+        // alert(sayHi); // 이러면 함수코드 전체가 보인다. hello만 보이는 것이 아니라
+        // sayHi 옆에 괄호가 없기 때문에 함수는 실행되지 않는다.
+        // 자바스크립트는 괄호가 있어야만 함수가 호출 된다. 
+
+        // let func = sayHi; // 함수복사 (괄호가 없다는 점에 유의)
+
+        // // 함수를 실행하려면
+        // func();
+        // sayHi();
+
+
+        // ---------------------------------------------
+
+        // function sayHi() {
+        //     alert("Hello");
+        // }
+
+        // 함수표현식 : 함수를 변수에 담아두는 형식을 말함
+        // let sayHi = function () {
+        //     alert("hello");
+        // };
+
+        // 끝에 세미클론은 왜 있는가? 
+        // let sayHi = ....;
+        // 코드의 블록이 아니고 값처럼 취급되어 변수에 할당되기 때문이다.
+
+        // 함수를 값처럼 전달하는 예시
+
+        // '콜백 메서드' 라고 부른다. 
+        // function ask(question, yes, no) {
+        //     if (confirm(question)) {
+        //         // confirm 은 사용자에게서 응답을 받는 역할 
+        //         yes();
+        //     } else {
+        //         no();
+        //     }
+        // }
+
+        // function showOk() {
+        //     alert("동의 하셨습니다.");
+        // }
+
+        // function showCancel() {
+        //     alert("취소버튼을 눌렀습니다.");
+        // }
+
+        // // ask()함수의 사용법, 인자값을 3개 받는다. 
+        // ask("동의하나요?", showOk, showCancel); // ㄴshow 머시기 애들은 복사해서 들어간다? 저 위에서 showOk, showCancal하면 yes나 no 대신들어가고 
+        // // 밑에 괄호랑 합쳐져서 함수로 실행되네
+
+
+        function ask(q, y, n) {
+            if (confirm(q)) {
+                y();
+            } else {
+                n();
+            }
+        }
+        function Ok() {
+            alert("동의함");
+        }
+        function No() {
+            alert("동의안함");
+        }
+
+        // 밑에 얘가 실행하는 구문이고 위에는 정의하는 구문인가
+        ask("동의하나요?", Ok, No);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

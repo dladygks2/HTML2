@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        /*
+            이벤트
+
+            DOM 에서 몇 가지 만들어주는 이벤트 
+            - click
+            - dblclick(= doubleclick)
+            - mouseenter
+            - mouseleave
+
+        */
+
+        $(document).ready(function () {
+
+            // $("#p1").mouseenter(function () {
+            //     alert("마우스가 들어옴");
+            // });
+
+
+            // $("#p1").mouseleave(function () {
+            //     alert("마우스가 나감");
+            // });
+
+            // $("#p1").mouseleave(function () {
+            //     $(this).hide();
+            // });
+
+            // 
+            // hover이벤트가 왔을 때, p태그의 색상을 변경하라.
+            $("#p1").hover(function () {
+                $("#p1").css("background-color", "pink");
+                $("#p1").css("color", "white");
+                $("#p1").css("font-size", "30px");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <p id="p1">여기에 마우스를 가지고 오세요.</p>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 자바스크립트에서의 객체, 객체생성
+        // let user = new Object();  // 객체 생성자 문법
+        // let user = {};  // 객체 리터럴 문법
+
+        let user = {        // 객체
+            name: "John", // 키값, property name : 값
+            age: 30       // key age : 값(value)
+            // 선언을 해야지 사용할 수 있다.
+        };
+
+        // property or key의 값 얻기
+        // alert(user.name);
+
+        user.isAdmin = true;
+
+        // alert(user.isAdmin);
+
+        // property or key value 삭제하는 방법
+        delete user.age;
+        // alert(user.age); // undefined가 뜬다. delete했으므로
+
+        // 상수 객체 !!!!
+        // 상수 객체는 수정될 수 있다. 
+        // 주의 : const로 선언된 객체는 수정될 수 있다.
+        const user2 = {
+            name: "John"
+        }
+
+        user2.name = "Peter";
+
+        console.log(user2.name);
+
+        // 대괄호 표기법
+        let user3 = {
+            name: "John",
+            age: 30,
+            "likes birds": true
+        };
+
+        console.log(user3["likes birds"]);
+
+        // set
+        user3["likes foods"] = true;
+        console.log(user3["likes food"]);
+
+        // get
+        alert(user3["likes food"]);
+
+        //delete
+        delete user3["likes food"];
+        console.log(user3["likes food"]);
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
